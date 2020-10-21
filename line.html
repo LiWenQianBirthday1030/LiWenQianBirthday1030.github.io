@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <title>一维运动仿真</title>
+    <style>
+        body {background:white;color:black;}
+        .ff{font-weight:normal;font-family:Arial,Helvetica,"Times New Roman","Noto Sans Condensed",
+        "DejaVu Sans Condensed",sans-serif;}
+        td{height:16px;}
+        a:link{color:DarkBlue;} a:visited{color:blue;} a:hover{color:red;}
+        p.ps{margin:0px;padding:0px;font-size:14px;color:DarkSlateGray;}
+        nav{font-size:16px;}
+    </style>
+    <script src ="kinematics.js"></script>
+</head>
+
+<body class="ff">
+<input type="button" id = "bStart" class="ff" style="font-size:25px;z-index:5;color:black;background:white;position:absolute;" onclick="spc()" value="Start">
+<input type="button" id = "bBack" class="ff" style="font-size:25px;z-index:5;color:black;background:white;position:absolute;" onclick="back()" value="Back">
+<select id="preset" class="ff" style="font-size:14px;z-index:5;color:black;background:white;position:absolute;" onchange="presetCases();">
+    <option value="0">直线运动例子</option>
+    <option value="1">匀速运动1</option>
+    <option value="2">匀速运动2</option>
+    <option value="3">匀加速直线运动1</option>
+    <option value="4">匀加速直线运动2</option>
+    <option value="5">匀减速直线运动1</option>
+    <option value="6">匀减速直线运动2</option>
+    <option value="7">先加速再匀速再减速1</option>
+    <option value="8">先加速再匀速再减速2</option>
+    <option value="9">先匀速再加速再匀速</option>
+    <option value="10">先匀速再减速再匀速</option>
+</select>
+
+<div id ="myDIV">
+    <canvas id = "kin" width = "1200" height = "600" style="z-index:1;position:absolute;left:10px;top:10px;margin:0px;border:5px solid white;padding:1px;">
+        Your browser does not support the canvas tag.
+    </canvas>
+</div>
+
+</body>
+</html>
